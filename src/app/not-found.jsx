@@ -8,7 +8,7 @@ const NotFoundPage = () => {
       <p>Could not find requested resource</p>
       <Link href="/">
         {" "}
-        <Button fullWidth  variant="outline">Go Back Home</Button>
+        <Button fullWidth  variant="outline"> Go Back Home</Button>
       </Link>
     </div>
   );

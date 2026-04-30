@@ -4,14 +4,12 @@ import Link from "next/link";
 import { FaExpandAlt } from "react-icons/fa";
 
 const AllTilesPage = async () => {
-
   const res = await fetch("https://tiles-db.onrender.com/tiles");
   const tilesData = await res.json();
 
-
   return (
     <div>
-      <h2 className="text-3xl font-bold text-stone-400 text-center my-5">
+      <h2 className="text-3xl font-bold text-stone-400 text-center my-5 tracking-widest">
         ALL TILES COLLECTION
       </h2>
 

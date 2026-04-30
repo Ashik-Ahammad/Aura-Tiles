@@ -10,7 +10,7 @@ export default function Loading() {
       </div>
 
         <div className="font-mono text-gray-500 text-[10px] md:text-xs tracking-[0.3em] uppercase">
-          Loading Tiles Collections
+          Loading Tiles
           <span className="animate-caret-blink inline-block ml-1">...</span>
         </div>
       </div>

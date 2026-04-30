@@ -7,18 +7,19 @@ import {
   FaPinterestP,
   FaPhoneAlt,
 } from "react-icons/fa";
+import { IoIosNavigate } from "react-icons/io";
 import { IoMailOpenOutline } from "react-icons/io5";
 
 const Footer = () => {
   return (
     <footer className="bg-[#1C1613] text-white/70 pt-20 pb-10 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Main Footer Grid */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Column 1: Logo & Newsletter */}
+
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
             <div className="flex items-center gap-2">
-              <h6 className="text-2xl text-amber-600 font-bold uppercase tracking-tighter">
+              <h6 className="text-2xl text-[#DFAA82] font-bold uppercase tracking-tighter">
                 Aura Tiles
               </h6>
             </div>
@@ -33,12 +34,11 @@ const Footer = () => {
                 className="w-full bg-white py-4 px-6 rounded-sm text-black outline-none font-medium"
               />
               <button className="absolute right-4 top-1/2 -translate-y-1/2 text-[#C68B5F] hover:translate-x-1 transition-transform">
-                <span className="text-2xl font-bold">→</span>
+                <span className="text-2xl font-bold"><IoIosNavigate/></span>
               </button>
             </div>
           </div>
 
-          {/* Column 2: Explore */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2 uppercase tracking-wider">
               <span className="w-2 h-2 bg-[#C68B5F]"></span> Explore
@@ -87,7 +87,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Services */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2 uppercase tracking-wider">
               <span className="w-2 h-2 bg-[#C68B5F]"></span> Services
@@ -136,7 +135,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Get In Touch */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2 uppercase tracking-wider">
               <span className="w-2 h-2 bg-[#C68B5F]"></span> Get In Touch
@@ -169,9 +167,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-          {/* Manual Social Icons (No Map) */}
+
           <div className="flex justify-center gap-3">
             <Link
               href="#"

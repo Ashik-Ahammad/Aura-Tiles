@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-40 w-full border-b border-divider bg-background/70 backdrop-blur-lg">
-      <header className="flex h-16 items-center justify-between px-6 max-w-7xl mx-auto">
+      <header className="flex h-16 items-center justify-between px-2 max-w-7xl mx-auto">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <span className="text-xl font-bold tracking-tighter">
@@ -17,7 +17,6 @@ const Navbar = () => {
                 alt="logo"
                 width={190}
                 height={60}
-                unoptimized
                 priority
               />
             </span>
