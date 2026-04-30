@@ -1,10 +1,31 @@
 "use client";
 import { useState } from "react";
-import { Link } from "@heroui/react";
+import { Avatar, Link } from "@heroui/react";
 import Image from "next/image";
+import { authClient } from "@/lib/auth-client";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+   const router = useRouter();
+
+  const handleLogout = async () => {
+    const toastId = toast.loading("Logging out...");
+    await authClient.signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          toast.success("Logged out successfully!", { id: toastId });
+          router.refresh();
+          router.push("/login");
+        },
+      },
+    });
+  };
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
 
   return (
     <nav className="sticky top-0 z-40 w-full border-b border-divider bg-background/70 backdrop-blur-lg">
@@ -42,7 +63,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="/my-profile"
+              href="/profile"
               className="text-sm font-medium hover:text-primary transition-colors text-foreground"
             >
               My Profile
@@ -51,13 +72,29 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <div className="hidden md:block">
-            <Link href="/login">
-              <button className="px-4 py-2 bg-primary text-primary-foreground rounded-full font-semibold cursor-pointer text-sm hover:opacity-90 transition-opacity">
-                Login
-              </button>
-            </Link>
-          </div>
+          {!user && (
+            <div className="hidden md:block">
+              <Link href="/login">
+                <button className="px-4 py-2 bg-primary text-primary-foreground rounded-full font-semibold cursor-pointer text-sm hover:opacity-90 transition-opacity">
+                  Login
+                </button>
+              </Link>
+            </div>
+          )}
+          {user && (
+            <div className="flex">
+              <Avatar>
+                <Avatar.Image alt="User" src={user?.image} />
+                <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+              </Avatar>
+
+              <Link onClick={handleLogout} href="/login">
+                <button className="px-4 py-2 bg-primary text-primary-foreground rounded-full font-semibold cursor-pointer text-sm hover:opacity-90 transition-opacity">
+                  Logout
+                </button>
+              </Link>
+            </div>
+          )}
 
           <button
             className="md:hidden p-2 text-foreground"
@@ -115,7 +152,7 @@ const Navbar = () => {
             </li>
             <li className="w-full">
               <Link
-                href="/my-profile"
+                href="/profile"
                 className="block py-3 text-lg w-full text-foreground"
                 onClick={() => setIsMenuOpen(false)}
               >
