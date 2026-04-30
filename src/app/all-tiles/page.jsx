@@ -3,6 +3,12 @@ import { Button, Card, CardHeader, CardFooter, Chip } from "@heroui/react";
 import Link from "next/link";
 import { FaExpandAlt } from "react-icons/fa";
 
+export const metadata = {
+  title: "All Collection | Aura Tiles",
+  description: "Best Tiles Shop in Bangladesh",
+};
+
+
 const AllTilesPage = async () => {
   const res = await fetch("https://tiles-db.onrender.com/tiles");
   const tilesData = await res.json();

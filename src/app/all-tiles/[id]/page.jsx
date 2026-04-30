@@ -3,6 +3,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowLeft, FaCheckCircle, FaRulerCombined, FaLayerGroup } from "react-icons/fa";
 
+export const generateMetadata = async ({params}) => {
+
+  const {id} = await params;
+
+  const res = await fetch("https://tiles-db.onrender.com/tiles");
+  const tiles = await res.json();
+  const tile = tiles.find((t) => t.id == id);
+
+  return {
+    title: tile.title,
+    description: tile.description
+  }
+
+};
+
+
 const TilesDetailPage = async ({ params }) => {
   const { id } = await params;
 
