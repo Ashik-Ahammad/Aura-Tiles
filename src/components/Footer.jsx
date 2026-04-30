@@ -4,201 +4,143 @@ import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
-  FaPinterestP,
+  FaLinkedinIn,
   FaPhoneAlt,
 } from "react-icons/fa";
-import { IoIosNavigate } from "react-icons/io";
-import { IoMailOpenOutline } from "react-icons/io5";
+import { IoMailOutline, IoLocationOutline } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1C1613] text-white/70 pt-20 pb-10 px-6">
+    <footer className="bg-[#181310] text-white pt-20 pb-8 px-6">
       <div className="max-w-7xl mx-auto">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
 
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
-            <div className="flex items-center gap-2">
-              <h6 className="text-2xl text-[#DFAA82] font-bold uppercase tracking-tighter">
-                Aura Tiles
-              </h6>
-            </div>
-            <p className="text-sm leading-relaxed max-w-xs">
-              Aura Tiles company, specializing in the production and
-              distribution of premium flooring solutions for modern living.
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-5">
+            <h2 className="text-2xl font-bold text-[#C68B5F]">
+              Aura Tiles
+            </h2>
+            <p className="text-sm text-white/60 leading-relaxed max-w-xs">
+              Premium tiles crafted for modern interiors. Elevate your
+              spaces with durability, elegance, and timeless design.
             </p>
-            <div className="relative w-full max-w-xs">
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full bg-white py-4 px-6 rounded-sm text-black outline-none font-medium"
-              />
-              <button className="absolute right-4 top-1/2 -translate-y-1/2 text-[#C68B5F] hover:translate-x-1 transition-transform">
-                <span className="text-2xl font-bold"><IoIosNavigate/></span>
-              </button>
+
+            <div className="flex justify-center lg:justify-start gap-3 pt-2">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#C68B5F] transition-all duration-300"
+              >
+                <FaFacebookF size={14} />
+              </a>
+
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#C68B5F] transition-all duration-300"
+              >
+                <FaTwitter size={14} />
+              </a>
+
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#C68B5F] transition-all duration-300"
+              >
+                <FaInstagram size={14} />
+              </a>
+
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#C68B5F] transition-all duration-300"
+              >
+                <FaLinkedinIn size={14} />
+              </a>
             </div>
           </div>
 
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2 uppercase tracking-wider">
-              <span className="w-2 h-2 bg-[#C68B5F]"></span> Explore
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <h3 className="text-white font-semibold mb-5 uppercase text-sm tracking-wider">
+              Quick Links
             </h3>
-            <ul className="space-y-4 text-sm font-medium">
+            <ul className="space-y-3 text-sm text-white/70">
               <li>
-                <Link
-                  href="/"
-                  className="hover:text-[#C68B5F] transition-colors no-underline"
-                >
-                  About Us
+                <Link href="/" className="hover:text-[#C68B5F]">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/"
-                  className="hover:text-[#C68B5F] transition-colors no-underline"
-                >
-                  Our Services
+                <Link href="/all-tiles" className="hover:text-[#C68B5F]">
+                  All Tiles
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/"
-                  className="hover:text-[#C68B5F] transition-colors no-underline"
-                >
-                  Meet The Team
+                <Link href="/profile" className="hover:text-[#C68B5F]">
+                  My Profile
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/"
-                  className="hover:text-[#C68B5F] transition-colors no-underline"
-                >
-                  Recent News
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-[#C68B5F] transition-colors no-underline"
-                >
+                <Link href="/contact" className="hover:text-[#C68B5F]">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2 uppercase tracking-wider">
-              <span className="w-2 h-2 bg-[#C68B5F]"></span> Services
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <h3 className="text-white font-semibold mb-5 uppercase text-sm tracking-wider">
+              Services
             </h3>
-            <ul className="space-y-4 text-sm font-medium">
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#C68B5F] transition-colors no-underline"
-                >
-                  Carpets & Rugs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#C68B5F] transition-colors no-underline"
-                >
-                  Industrial Flooring
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#C68B5F] transition-colors no-underline"
-                >
-                  Tiling & Concrete
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#C68B5F] transition-colors no-underline"
-                >
-                  Vein Patterns
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#C68B5F] transition-colors no-underline"
-                >
-                  Vinyl Plank
-                </Link>
-              </li>
+            <ul className="space-y-3 text-sm text-white/70">
+              <li><Link href="#">Floor Tiles</Link></li>
+              <li><Link href="#">Wall Tiles</Link></li>
+              <li><Link href="#">Marble Design</Link></li>
+              <li><Link href="#">Wood Finish</Link></li>
+              <li><Link href="#">Custom Patterns</Link></li>
             </ul>
           </div>
 
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2 uppercase tracking-wider">
-              <span className="w-2 h-2 bg-[#C68B5F]"></span> Get In Touch
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <h3 className="text-white font-semibold mb-5 uppercase text-sm tracking-wider">
+              Contact Us
             </h3>
-            <div className="space-y-6 text-sm font-medium flex flex-col items-center lg:items-start">
-              <p>
-                71 Baagi Road
-                <br />
-                Katabon, Shahbag 1971
-              </p>
+
+            <div className="space-y-4 text-sm text-white/70 flex flex-col items-center text-center lg:items-start lg:text-left">
+
               <div className="flex items-center gap-3">
-                <IoMailOpenOutline className="text-[#C68B5F] text-xl" />
-                <a
-                  href="mailto:needhelp@aura.com"
-                  className="hover:text-white no-underline transition-colors"
-                >
-                  needhelp@aura.com
+                <IoLocationOutline className="text-[#C68B5F]" />
+                <p>
+                  Katabon, Shahbag <br />
+                  Dhaka, Bangladesh
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <IoMailOutline className="text-[#C68B5F]" />
+                <a href="mailto:info@auratiles.com">
+                  info@auratiles.com
                 </a>
               </div>
+
               <div className="flex items-center gap-3">
-                <FaPhoneAlt className="text-[#C68B5F] text-lg" />
-                <a
-                  href="tel:+9156980036420"
-                  className="hover:text-white no-underline transition-colors"
-                >
-                  +8801234 567890
+                <FaPhoneAlt className="text-[#C68B5F]" />
+                <a href="tel:+8801234567890">
+                  +880 1234 567 890
                 </a>
               </div>
+
             </div>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="pt-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 text-xs text-white/50">
+          <p>© 2026 Aura Tiles. All rights reserved.</p>
 
-          <div className="flex justify-center gap-3">
-            <Link
-              href="#"
-              className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#C68B5F] hover:border-[#C68B5F] transition-all rounded-sm"
-            >
-              <FaFacebookF size={14} className="text-white" />
-            </Link>
-            <Link
-              href="#"
-              className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#C68B5F] hover:border-[#C68B5F] transition-all rounded-sm"
-            >
-              <FaTwitter size={14} className="text-white" />
-            </Link>
-            <Link
-              href="#"
-              className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#C68B5F] hover:border-[#C68B5F] transition-all rounded-sm"
-            >
-              <FaInstagram size={14} className="text-white" />
-            </Link>
-            <Link
-              href="#"
-              className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#C68B5F] hover:border-[#C68B5F] transition-all rounded-sm"
-            >
-              <FaPinterestP size={14} className="text-white" />
-            </Link>
+          <div className="flex gap-6">
+            <Link href="#">Privacy Policy</Link>
+            <Link href="#">Terms & Conditions</Link>
           </div>
-
-          <p className="text-[10px] md:text-xs tracking-widest font-bold uppercase opacity-60 text-center">
-            © Copyright 2026 By Aura Tiles All Rights Reserved.
-          </p>
         </div>
       </div>
     </footer>

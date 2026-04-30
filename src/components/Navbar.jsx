@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-40 w-full border-b border-divider bg-background/70 backdrop-blur-lg">
-      <header className="flex h-16 items-center justify-between px-2 max-w-7xl mx-auto">
+      <header className="flex h-16 items-center justify-between px-2 max-w-7xl mx-auto relative">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <span className="text-xl font-bold tracking-tighter">
@@ -44,7 +44,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           <li>
             <Link
               href="/"

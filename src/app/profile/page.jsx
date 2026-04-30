@@ -10,9 +10,9 @@ const MyProfilePage = () => {
   const user = userData.data?.user;
 
   return (
-    <div>
+    <div className="mx-3">
       <h2 className="my-5 text-center font-bold">My Profile</h2>
-      <Card className="max-w-96 mx-auto flex-col items-center text-center">
+      <Card className="max-w-lg mx-auto flex-col items-center text-center">
         <Avatar className="h-20 w-20">
           <Avatar.Image
             src={user?.image}

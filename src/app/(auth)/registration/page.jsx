@@ -17,12 +17,26 @@ import {
 } from "@heroui/react";
 import { toast } from "sonner";
 import Link from "next/link";
+import { GrGoogle } from "react-icons/gr";
 
 const RegistrationPage = () => {
-
   const router = useRouter();
 
   const [isVisible, setIsVisible] = useState(false);
+
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social(
+      {
+        provider: "google",
+      },
+      {
+        onSuccess: () => {
+          router.refresh();
+          router.push("/");
+        },
+      },
+    );
+  };
 
   const {
     register,
@@ -51,8 +65,6 @@ const RegistrationPage = () => {
       router.push("/login");
     }
   };
-
-
 
   return (
     <div className="max-w-2xl mx-auto px-6">
@@ -136,6 +148,15 @@ const RegistrationPage = () => {
             </Button>
           </div>
 
+          <p className="text-center my-2 text-gray-400">Or</p>
+
+          <Button
+            onClick={handleGoogleSignIn}
+            variant="outline"
+            className="w-full border-gray-200"
+          >
+            <GrGoogle className="text-red-500" /> Sign Up With Google
+          </Button>
         </Form>
 
         <p className="text-center my-4">

@@ -1,6 +1,6 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { Button, Input, Label, Surface, TextField, Card } from "@heroui/react";
+import { Button, Input, Label, TextField, Card } from "@heroui/react";
 import { User, ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
@@ -42,7 +42,7 @@ const UpdateProfilePage = () => {
 
       <Card className="p-8 shadow-xl border rounded-2xl bg-white">
         <div className="flex items-center gap-4 mb-8">
-          <div className="p-3 bg-[#C68B5F]/10 rounded-full text-[#C68B5F]">
+          <div className="p-3 bg-[#C68B5F]/10 rounded-full text-sky-500">
             <User size={24} />
           </div>
           <h1 className="text-2xl font-bold">Update Profile</h1>
