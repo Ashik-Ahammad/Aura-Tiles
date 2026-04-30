@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import Link from "next/link";
 
-export default function UpdateProfilePage() {
+const UpdateProfilePage = () => {
 
   const router = useRouter();
 
@@ -75,3 +75,5 @@ export default function UpdateProfilePage() {
     </div>
   );
 }
+
+export default UpdateProfilePage;

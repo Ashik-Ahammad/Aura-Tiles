@@ -5,6 +5,7 @@ import { Edit } from "lucide-react";
 import Link from "next/link";
 
 const MyProfilePage = () => {
+  
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
