@@ -1,11 +1,10 @@
 "use client";
-import { UpdateUser } from "@/components/UpdateUser";
 import { authClient } from "@/lib/auth-client";
-import { Avatar, Card } from "@heroui/react";
-import Image from "next/image";
+import { Avatar, Button, Card } from "@heroui/react";
+import { Edit } from "lucide-react";
+import Link from "next/link";
 
 const MyProfilePage = () => {
-  
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
@@ -24,7 +23,26 @@ const MyProfilePage = () => {
         <h2 className="text-2xl font-bold">{user?.name}</h2>
         <p className="text-muted select-none">{user?.email}</p>
 
-        <UpdateUser user={user}></UpdateUser>
+        <small className="text-muted-foreground text-gray-400">
+          Last Updated:{" "}
+          {user?.updatedAt
+            ? new Date(user.updatedAt).toLocaleString([], {
+                year: "numeric",
+                month: "numeric",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                hour12: true,
+              })
+            : "Never"}
+        </small>
+
+        <Link href="/profile/update-user">
+          <Button variant="secondary" className="mt-4 w-full">
+            <Edit size={16} className="mr-2" /> Update Profile
+          </Button>
+        </Link>
       </Card>
     </div>
   );
