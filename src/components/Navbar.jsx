@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
 const Navbar = () => {
-   const router = useRouter();
+  const router = useRouter();
 
   const handleLogout = async () => {
     const toastId = toast.loading("Logging out...");

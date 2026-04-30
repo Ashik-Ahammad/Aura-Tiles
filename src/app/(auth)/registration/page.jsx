@@ -83,7 +83,7 @@ const RegistrationPage = () => {
             <FieldError>{errors.email?.message}</FieldError>
           </TextField>
 
-          <TextField isRequired name="image">
+          <TextField isRequired name="image" type="url">
             <Label>Photo URL</Label>
             <Input
               {...register("image", { required: "Photo link is required" })}
