@@ -8,11 +8,11 @@ const TilesCard = ({ tile }) => {
     <Card className="w-full h-full flex flex-col group border-none bg-background/60 shadow-md hover:shadow-lg ">
       <div className="p-0 overflow-hidden relative h-75">
         <Image
+          src={tile.image}
           alt={tile.title}
           width={400}
           height={400}
           className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-          src={tile.image}
         />
 
         <div className="absolute top-3 right-3 z-20">
@@ -32,7 +32,7 @@ const TilesCard = ({ tile }) => {
       <CardHeader className="flex-col items-start px-4 pt-4 pb-0 grow">
         <div className="flex justify-between items-center w-full">
           <small className="text-[#C68B5F] font-bold uppercase tracking-widest text-[10px]">
-            • {tile.category}
+            • {tile.category} •
           </small>
 
           <div className="text-default-400 text-[10px] font-medium italic">

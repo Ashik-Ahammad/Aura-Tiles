@@ -38,7 +38,7 @@ const TilesDetailPage = async ({ params }) => {
             startContent={<FaArrowLeft />}
             className="font-bold bg-[#C68B5F] text-white rounded-md"
           >
-            BACK TO ALL TILES
+            BACK TO ALL COLLECTION
           </Button>
         </Link>
       </div>
