@@ -7,7 +7,7 @@ const SearchBar = ({ handleSearch }) => {
   const [value, setValue] = useState("");
 
   return (
-    <div className="max-w-5xl mx-5 md:mx-auto">
+    <div className="max-w-5xl mx-5 md:mx-10 lg:mx-auto">
       <SearchField aria-label="Search Tiles">
         <SearchField.Group>
           <SearchField.SearchIcon />
@@ -18,7 +18,7 @@ const SearchBar = ({ handleSearch }) => {
             placeholder="Search by title..."
           />
           <Button
-            onClick={() => handleSearch(value)} 
+            onClick={() => handleSearch(value)}
             variant="ghost"
           >
             <Search size={20} />
