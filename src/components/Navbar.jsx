@@ -28,7 +28,7 @@ const Navbar = () => {
   const user = userData.data?.user;
 
   return (
-    <nav className="sticky top-0 z-40 w-full border-b border-divider bg-background/70 backdrop-blur-lg">
+    <nav className="sticky top-0 z-40 w-full border-b border-divider bg-background/70 backdrop-blur-md">
       <header className="flex h-16 items-center justify-between px-2 max-w-7xl mx-auto relative">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">

@@ -49,4 +49,4 @@ The **Aura Tiles** project was developed to provide a seamless digital catalog e
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/Ashik-Ahammad](https://github.com/your-username/aura-tiles.git)
+   git clone [https://github.com/Ashik-Ahammad](https://github.com/Ashik-Ahammad/Aura-Tiles.git)
